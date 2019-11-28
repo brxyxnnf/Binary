@@ -1,14 +1,26 @@
-<ion-header>
+<ion-header color="PRIMARY">
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      BINARY
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-input placeholder="Número A" type="text" [(ngModel)]="numeroA"></ion-input>
+    <ion-input placeholder="Númeor B" [(ngModel)]="numeroB" class="ion-text-right"></ion-input>
+    <!--<div>
+      <ion-grid>
+        <ion-row>
+          <ion-col><ion-button style="width: 10%;">1</ion-button></ion-col>
+          <ion-col><ion-button style="width: 8%;">0</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>   --> 
+    <ion-button expand="block" (click)="ordenarTexto()">SUMA</ion-button>
+    <ion-button expand="block">RESTA</ion-button>
+    <ion-button expand="block">MULTIPLICACIÓN</ion-button>
+    <ion-button expand="block">DIVISIÓN</ion-button>
   </div>
 </ion-content>
