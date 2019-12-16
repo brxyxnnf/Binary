@@ -7,13 +7,14 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
+  <div class="ion-padding" style="width: 100%; height: 100%;">
+
     <ion-input placeholder="Número A" type="text" [(ngModel)]="numeroA"></ion-input>
     <ion-input placeholder="Númeor B" [(ngModel)]="numeroB" class="ion-text-right"></ion-input>
     
-    <ion-button expand="block" (click)="Suma()">SUMA</ion-button>
-    <ion-button expand="block">RESTA</ion-button>
+    <ion-button expand="block" (click)="botonSuma()">SUMA</ion-button>
+    <ion-button expand="block" (click)="botonResta()">RESTA</ion-button>
     <ion-button expand="block" (click)="Multiplicacion()">MULTIPLICACIÓN</ion-button>
-    <ion-button expand="block">DIVISIÓN</ion-button>
+    <ion-button expand="block" (click)="Division()">DIVISIÓN</ion-button>
   </div>
 </ion-content>
