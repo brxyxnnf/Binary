@@ -188,23 +188,40 @@ public mensaje;
         this.resultado = '1';
         for (let i = this.numeroB.length; i < this.numeroA.length; i++) {
           div1 = this.resultadoSuma + this.numeroA[i];
-          // console.log(div1);
           this.ComprobarMayor(div1, this.numeroB);
           if (this.control === true) {
             this.Resta(div1, this.numeroB);
             this.resultado = this.resultado + '1';
-            console.log(this.resultadoSuma);
           } else {
             this.resultado = this.resultado + '0';
             this.resultadoSuma = div1;
           }
         }
-        // console.log(this.resultado, this.resultadoSuma);
       } else {
         div1 = this.numeroA.substring(0, this.numeroB.length + 1);
       }
-      console.log(this.resultado);
+      this.alertaResultadoDivision();
     }
+  }
+  async alertaResultadoDivision() {
+    const alert = await this.alertController.create({
+      header: 'Resultado: ' + this.resultado,
+      message: 'Residuo: ' + this.resultadoSuma,
+      buttons: [
+        {
+          text: 'Procedimiento',
+          role: 'proc',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Mostrar procedimiento');
+          }
+        }, {
+          text: 'Aceptar',
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 }

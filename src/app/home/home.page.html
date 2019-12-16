@@ -1,4 +1,4 @@
-<ion-header color="PRIMARY">
+<ion-header>
   <ion-toolbar>
     <ion-title>
       BINARY
@@ -6,15 +6,45 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding" style="width: 100%; height: 100%;">
-
-    <ion-input placeholder="Número A" type="text" [(ngModel)]="numeroA"></ion-input>
-    <ion-input placeholder="Númeor B" [(ngModel)]="numeroB" class="ion-text-right"></ion-input>
-    
-    <ion-button expand="block" (click)="botonSuma()">SUMA</ion-button>
-    <ion-button expand="block" (click)="botonResta()">RESTA</ion-button>
-    <ion-button expand="block" (click)="Multiplicacion()">MULTIPLICACIÓN</ion-button>
-    <ion-button expand="block" (click)="Division()">DIVISIÓN</ion-button>
+<ion-content class="yourclass">
+<div class="yourclass" style="height: 100%; width: 100%;">
+  <div style="width: 100%; height: 50%;">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-padding">
+          <ion-input style="background-color: white;" placeholder="Número A" type="text" [(ngModel)]="numeroA"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-padding">
+          <ion-input style="background-color: white;" placeholder="Número B" [(ngModel)]="numeroB" class="ion-text-right"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
+  <div class="ion-padding" style="width: 100%; height: 20%;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="block" style="height: 80px;" (click)="botonSuma()">SUMA</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" style="height: 80px;" (click)="botonResta()">RESTA</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="ion-padding" style="width: 100%; height: 20%;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="block" style="height: 80px;" (click)="Multiplicacion()">MULTIPLICACIÓN</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" style="height: 80px;" (click)="Division()">DIVISIÓN</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>         
+  </div>
+</div>
 </ion-content>
